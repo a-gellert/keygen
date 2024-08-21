@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор ключей HAMSTER KOMBAT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Генератор ключей HAMSTER KOMBAT</h1>
+        <div class="form-group">
+            <label for="gameSelect">Выберите игру</label>
+            <select id="gameSelect">
+                <option value="1">Riding Extreme 3D</option>
+                <option value="2">Chain Cube 2048</option>
+                <option value="3">My Clone Army</option>
+                <option value="4">Train Miner</option>
+                <option value="5">MergeAway</option>
+                <option value="6">Twerk Race</option>
+                <option value="7">Polysphere</option>
+
+            </select>
+        </div>
+
+          
+        <div class="form-group">
+            <label id="keyCountLabel" for="keyCountSelect">Количество ключей:</label>
+            <select id="keyCountSelect">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                
+            </select>
+        </div>
+        <button id="startBtn">СГЕНЕРИРОВАТЬ</button>
+
+        <label>
+            <input type="checkbox" id="logCheckbox"> Включить логи
+        </label>
+        <textarea id="logArea" rows="3" readonly style="width: 100%; resize: none; font-size: 12px; display: none;"></textarea>
+        
+        <div id="progressContainer" class="hidden">
+            <div class="progress-bar">
+                <div id="progressBar"></div>
+            </div>
+            <div id="progressText">0%</div>
+            <div id="progressLog">Стартуем...</div>
+            <div id="countdownContainer">
+            <p>Следующая попытка получить код через: <span id="countdownTimer"></span> секунд </p>
+            </div>
+        </div>
+        <div id="keyContainer" class="hidden">
+            <h3 id="generatedKeysTitle" class="hidden">Сгенерированные ключи:</h3>
+            <div id="keysList"></div>
+            <button id="copyAllBtn" class="hidden">Скопировать всё</button>
+            <div id="copyStatus" class="hidden">Скопировано!</div>
+           <button id="generateMoreBtn">Сгенерировать ещё</button>
+        </div>
+        <div class="mycodes">
+            <p>
+                Генерация может занимать больше 10 минут<br>
+                При частых ошибках пишите в телеграм чат <a href="https://t.me/cryptonbazachat">Криптобаза Чат</a>
+            </p>
+            <button id="ShowKeysBtn">Показать сгенерированные коды за сегодня</button>
+            <div id="generatedCodesContainer" style="display:none;">
+                <h3>Сгенерированные коды за сегодня:</h3>
+                <ul id="generatedCodesList"></ul>
+            </div>
+
+        </div>
+        <div class="footer">
+            <button id="telegramChannelBtn">Подпишитесь на канал 🆔</button></p>
+            <button id="creatorChannelBtn">Связь с разработчиком</button> 
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
